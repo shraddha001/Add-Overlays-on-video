@@ -81,7 +81,6 @@ class EditActivity : AppCompatActivity() {
         }
 
         btnSave.setOnClickListener {
-//            saveVideoWithOverlays()
             progressBar.isVisible = true
             progressBar.isActivated = true
             exportVideoWithOverlays()
@@ -212,6 +211,7 @@ class EditActivity : AppCompatActivity() {
 //        mediaRecorder.release()
     }
 
+    // Code for exporting overlays
     private fun exportVideoWithOverlays() {
         val overlayBitmap = getOverlayBitmap()
 
@@ -277,6 +277,8 @@ class EditActivity : AppCompatActivity() {
     }
 
 
+
+    // Create output file
     private fun createOutputFile(context: Context): File {
         val timeStamp = System.currentTimeMillis()
         val storageDir = context.getExternalFilesDir(Environment.DIRECTORY_MOVIES)
