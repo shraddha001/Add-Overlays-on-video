@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/black"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditActivity">
@@ -18,7 +19,73 @@
     <FrameLayout
         android:id="@+id/overlay_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <!-- LEFT guideline -->
+        <View
+            android:id="@+id/left_guideline"
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginStart="16dp"
+            android:background="#00B8CB"
+
+
+            android:visibility="gone" />
+
+        <!-- RIGHT guideline -->
+        <View
+            android:id="@+id/right_guideline"
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:background="#00B8CB"
+
+            android:visibility="gone" />
+
+        <!-- TOP guideline -->
+        <View
+            android:id="@+id/top_guideline"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="16dp"
+            android:background="#00B8CB"
+
+            android:visibility="gone" />
+
+        <!-- BOTTOM guideline -->
+        <View
+            android:id="@+id/bottom_guideline"
+            android:layout_width="match_parent"
+
+            android:layout_height="1.5dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="16dp"
+            android:background="#00B8CB"
+            android:visibility="gone" />
+
+        <!-- VERTICAL CENTER guideline -->
+        <View
+            android:id="@+id/center_vertical_guideline"
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="#00B8CB"
+            android:visibility="gone" />
+
+        <!-- HORIZONTAL CENTER guideline -->
+        <View
+            android:id="@+id/center_horizontal_guideline"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_gravity="center_vertical"
+
+            android:background="#00B8CB"
+            android:visibility="gone" />
+
+    </FrameLayout>
 
     <!-- Controls -->
     <LinearLayout
@@ -51,7 +118,6 @@
             android:layout_marginStart="8dp" />
     </LinearLayout>
 
-
     <ProgressBar
         android:id="@+id/progress"
         android:layout_width="90dp"
@@ -60,5 +126,6 @@
         android:visibility="gone"
         tools:visibility="visible"
         android:progressBackgroundTint="@color/purple"
-        android:progressTint="@color/purple"/>
+        android:progressTint="@color/purple" />
+
 </FrameLayout>
